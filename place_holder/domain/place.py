@@ -7,7 +7,7 @@ class Place:
     name: str
     address: str
     description: str
-    rating : int
+    rating: int
 
     def __init__(self, place_type: PlaceType, name: str, address:str, description: str, rating: int):
         self.type = type

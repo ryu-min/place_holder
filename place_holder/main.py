@@ -1,14 +1,9 @@
-from place_holder.handler_storage import FirstHandler, SecondHandler
-from place_holder.handlers import Handler
+from place_holder.domain import Place, PlaceType
 
-
-def printHandlerInfo(handler: Handler):
-    print(handler.handle())
-
-f = FirstHandler()
-s = SecondHandler()
-
-printHandlerInfo(f)
-printHandlerInfo(s)
+p = Place(PlaceType.RESTAURANT, 'some name', 'some address',
+        'some description', 4)
+print("p name is", p.name)
+print("p description is ", p.description)
+print("p rating is", p.rating)
 
 

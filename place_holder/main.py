@@ -1,10 +1,13 @@
 from place_holder.domain import *
+from place_holder.infrastructure.storages.test_storage import TestStorage
 
 p = Place(PlaceType.RESTAURANT, 'some name', 'some address',
         'some description', 4)
 
-print("p name is", p.name)
-print("p description is ", p.description)
-print("p rating is", p.rating)
+s = TestStorage()
+m = PlaceManager(s)
+
+m.add_place(p)
+m.get_all_places()
 
 
